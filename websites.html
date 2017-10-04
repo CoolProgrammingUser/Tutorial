@@ -8,8 +8,22 @@
         <link rel="stylesheet" href="https://epicenterprograms.github.io/standards/formatting.css">
         <link rel="stylesheet" href="formatting.css">
         <style>
+            p::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
             img {
                 width: 30em;
+            }
+            .left {
+                float: left;
+            }
+            .right {
+                float: right;
+            }
+            .column {
+                margin: 0em 1em;
             }
         </style>
     </head>
@@ -26,7 +40,10 @@
                 <h2>
                     Step 1
                 </h2>
-                <img src="images/website building/Step 1.png">
+                <p>
+                    <img class="right" src="images/website building/Step 1.png">  <!-- The image has to be first or it won't float correctly. -->
+                    The first thing you need to do is create an account on GitHub. If you already have an account, just log in and skip step 2.
+                </p>
                 <h2>
                     Step 2
                 </h2>
@@ -38,13 +55,13 @@
                 <h2>
                     Step 4
                 </h2>
-                <div>
+                <div class="column">
                     <h3>
                         Path 1
                     </h3>
                     <img src="images/website building/Step 4-1.png">
                 </div>
-                <div>
+                <div clas="column">
                     <h3>
                         Path 2
                     </h3>
