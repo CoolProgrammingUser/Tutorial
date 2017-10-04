@@ -1,0 +1,8 @@
+nav {
+    border-left: 1em solid cyan;
+    background-color: #eef;
+}
+nav h2 {
+    margin-bottom: .6em;
+    font-size: 2em;
+}
