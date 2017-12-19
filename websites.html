@@ -1,192 +1,194 @@
 <!DOCTYPE html>
 <html class="html-class">
-    <head>
-        <title>
-            Tutorial
-        </title>
-        <script src="https://epicenterprograms.github.io/standards/behavior.js"></script>
-        <link rel="stylesheet" href="https://epicenterprograms.github.io/standards/formatting.css">
-        <link rel="stylesheet" href="formatting.css">
-        <style>
-            p::after {
-                content: "";
-                clear: both;
-                display: table;
-            }
-            img {
-                margin: 0em 1.5em;
-                width: 40em;
-            }
-            .left {
-                float: left;
-            }
-            .right {
-                float: right;
-            }
-            .column {
-                margin: 0em 1em;
-            }
-            .column img {
-                margin: 0em;
-                width: 30em;
-            }
-            .page-jump-sections h2 {
-                margin-top: 2em;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="hidden-left-nav" data-href="navigation.html"></nav>
-        <h1 class="main-title">
-            Website building
-        </h1>
-        <main>
-            <p>
-                When you know what to do, making a sophisticated website from scratch for free is pretty easy. Here, I'll step you through the process of getting a website on the Internet. Also, when you inevitably have a hard time seeing the pictures because they're too small, right click on them and open the image in a new tab. (The circling may miss the main point at times as well.)
-            </p>
-            <div class="page-jump-sections">
-                <h2>
-                    Step 1
-                </h2>
-                <p>
-                    <img class="right" src="images/website building/Step 1.png">  <!-- The image has to be first or it won't float correctly. -->
-                    The first thing you need to do is create a free account on <a href="https://github.com/">GitHub</a>. GitHub is a open-source code hosting platform with benefits far surpassing the ability to make a website. If you already have an account, just log in and skip step 2. If you already have a repository ready to be made into a website, you can skip to step 6 or step 9 depending on how ready you actually are.
-                </p>
-                <h2>
-                    Step 2
-                </h2>
-                <p>
-                    <img class="left" src="images/website building/Step 2.png">
-                    When creating an account, you need to enter a username and password, and the email might also be necessary. (You'll see my username later as "CoolProgrammingUser".) Organizations are mentioned, but you don't really need to worry about those at this point. You'll also notice a terms and conditions section which you should read, but since you won't, I'll give you the summarized version: Don't be dumb (including putting private information on a open-source program). Also, anyone under the age of 13 is banned from having anything to do with this (which a pretty standard and depressing Internet rule). Since I didn't want to actually create a new account, I didn't proceed to the next steps of the registration process, but from memory (and Internet help), I can tell you that the second step is where you choose your plan: a free one that does basically everything you could ever want, or a paid one that allows you to also keep your code private if you want. The third step asks you a few questions about yourself and your purposes. Maybe someone creating an account in the future will provide me with screenshots I can put here to more adequately explain things.
-                </p>
-                <h2>
-                    Step 3
-                </h2>
-                <p>
-                    <img class="right" src="images/website building/Step 3.png">
-                    Once you create or log on to your account, you'll find yourself on a page similar to the one on the right (although, if you just created an account, it'll be empty and likely have some things prompting you to get started with something). The next thing to do is click the green button saying "New repository". A repository in GitHub is basically a place to store all the code pertaining to a ceratin project, and you'll need one to create a website.
-                </p>
-                <h2>
-                    Step 4
-                </h2>
-                <p>
-                    Regardless of how you create your repository, you'll need to give it a unique name (unique among your repositories). The repository name for this tutorial is "testrepository". I recommend using a repository name without capital letters for reasons described later. From there you can change a few things if you'd like but the main thing to pay attention to is whether you want to initialize the repository with a README. A README is a file typically used to explain your repository, and the content is displayed on the main page of your repository. You'll see in the next step how that option can make a big difference.
-                </p>
-                <div class="column">
-                    <h3>
-                        Path 1
-                    </h3>
-                    <img src="images/website building/Step 4-1.png">
-                </div>
-                <div class="column">
-                    <h3>
-                        Path 2
-                    </h3>
-                    <img src="images/website building/Step 4-2.png">
-                </div>
-                <h2>
-                    Step 5
-                </h2>
-                <p>
-                    If you choose to opt out of creating a README, you'll get the scenario on the left: Depending on your purposes and whether you have a repository on your personal computer that you want to upload, this doesn't have to be too bad (although looking at all of that makes me sick), but regardless, you certainly can't create any files from scratch. This tutorial assumes that you're creating things from scratch, so I recommend initializing the repository with a README, so you'll arrive at the page on the right and you can easily click the button to "Create new file".
-                <div>
-                    <div class="column left">
-                        <h3>
-                            Path 1 (continued)
-                        </h3>
-                        <img src="images/website building/Step 5-1.1.png">
-                        <br>
-                        <img src="images/website building/Step 5-1.2.png">
-                    </div>
-                    <div class="column right">
-                        <h3>
-                            Path 2 (continued)
-                        </h3>
-                        <img src="images/website building/Step 5-2.png">
-                    </div>
-                </div>
-                <h2>
-                    Step 6
-                </h2>
-                <p>
-                    <img class="right" src="images/website building/Step 6.png">
-                    Once on the page to create a new file, you need to name the file and add some content. If you want to create the home page of a website as is done here, the name of the file has to be "index.html". Also, now is the time if you'd like to change the indenting of your file. The default is 2 spaces for all new files; I prefer 4 spaces, but it doesn't really matter. Although it doesn't do it while you're creating the file, GitHub will provide helpful indenting and code highlighting for future edits.
-                </p>
-                <h2>
-                    Step 7
-                </h2>
-                <p>
-                    <img class="left" src="images/website building/Step 7.png">
-                    This is a sample file filled using <a href="https://epicenterprograms.github.io/websitebuilder/">Epicenter's website builder</a>. The standards referenced are public domain and can be viewed <a href="https://github.com/EpicenterPrograms/standards/">here</a>, so you can feel free to use them however you like.
-                </p>
-                <h2>
-                    Step 8
-                </h2>
-                <p>
-                    When you're ready to save the file you have two choices: commiting directly to the branch or creating a new branch. Commiting directly to the branch changes the file itself whereas creating a new branch leaves the original file (and repository as a whole) unchnaged and creates a separate version containing the change. Branching is good for big projects with many contributors, but it's unnecessarily complicated for small personal projects. If you're considering branching just because you're scared of making a change that messes everything up, you can take comfort in knowing that all previous versions of your repository are accessible by clicking on the number of commits on its main page. If you decide to branch you'll have to name the branch, but this tutorial commits directly to the master branch.
-                </p>
-                <div class="column">
-                    <h3>
-                        Path 1
-                    </h3>
-                    <img src="images/website building/Step 8-1.png">
-                </div>
-                <div class="column">
-                    <h3>
-                        Path 2
-                    </h3>
-                    <img src="images/website building/Step 8-2.png">
-                </div>
-                <h2>
-                    Step 9
-                </h2>
-                <p>
-                    <img class="right" src="images/website building/Step 9.png">
-                    Now that you have a basic webpage set up, it's time to tell GitHub to make a website from your repository. (Technically, you don't have to make any webpages first, but it's preferable.) Click on the settings tab to proceed to the next step.
-                </p>
-                <h2>
-                    Step 10
-                </h2>
-                <p>
-                    <img class="left" src="images/website building/Step 10.png">
-                    From the settings tab, you need to scroll down until you come across a section called "GitHub Pages".
-                </p>
-                <h2>
-                    Step 11
-                </h2>
-                <p>
-                    <img class="right" src="images/website building/Step 11.png">
-                    By default, GitHub pages is disabled. To change that you select a place you want to build the website in from the drop-down menu. (Don't bother with picking a theme: it could make things more confusing.)
-                </p>
-                <h2>
-                    Step 12
-                </h2>
-                <p>
-                    <img class="left" src="images/website building/Step 12.png">
-                    For the purposes of this tutorial and moderately simple projects in general, the place to build your website is on the master branch (not in a docs folder). A common place to build a website from is a "gh-pages" branch, and GitHub will use that if availible, but there's not much point in creating a gh-pages branch if the whole purpose of your repository is to create a website.
-                </p>
-                <h2>
-                    Step 13
-                </h2>
-                <p>
-                    <img class="right" src="images/website building/Step 13.png">
-                    Once you choose the source for your website, you'll be taken to the top of the page, and you'll see a notification that the GitHub pages source was saved.
-                </p>
-                <h2>
-                    Step 14
-                </h2>
-                <p>
-                    <img class="left" src="images/website building/Step 14.png">
-                    If you scroll back down to the GitHub Pages section of the settings, you'll see a URL where your website is ready to be published. It should have the format https://[yourUsername].github.io/[yourRepository]/. If you named your repository with capitals, those capital letters will be in the URL; <strong>these capitals <em>cannot</em> be replaced with lowercase letters</strong>. This can create difficulties when trying to get people to visit your website. Within a few minutes, you should be able to access your website from that URL.
-                </p>
-                <h2>
-                    Step 15
-                </h2>
-                <p>
-                    <img class="right" src="images/website building/Step 15.png">
-                    When GitHub tells you that your website has been published (you'll have to refresh the page), you can follow the link to see your creation. If you referenced the Epicenter standards in your website, you can get a cool-looking website like <a href="images/website building/Example 1.png">this</a>. If you didn't use those standards and didn't include extensive standards/formatting of your own, you would have a pretty lame-looking website, but that would serve as good inspiration to learn more HTML, CSS, and JavaScript.
-                </p>
-            </div>
-        </main>
-    </body>
+	<head>
+		<title>
+			Tutorial
+		</title>
+		<script src="https://epicenterprograms.github.io/standards/behavior/general.js"></script>
+		<link rel="stylesheet" href="https://epicenterprograms.github.io/standards/formatting.css">
+		<link rel="stylesheet" href="formatting.css">
+		<style>
+			p::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+			img {
+				margin: 0em 1.5em;
+				width: 40em;
+			}
+			.left {
+				float: left;
+			}
+			.right {
+				float: right;
+			}
+			.column {
+				margin: 0em 1em;
+			}
+			.column img {
+				margin: 0em;
+				width: 30em;
+			}
+			.page-jump-sections h2 {
+				margin-top: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="hidden-left-nav">
+			<iframe src="navigation.html"></iframe>
+		</nav>
+		<h1 class="main-title">
+			Website building
+		</h1>
+		<main>
+			<p>
+				When you know what to do, making a sophisticated website from scratch for free is pretty easy. Here, I'll step you through the process of getting a website on the Internet. Also, when you inevitably have a hard time seeing the pictures because they're too small, right click on them and open the image in a new tab. (The circling may miss the main point at times as well.)
+			</p>
+			<div class="page-jump-sections">
+				<h2>
+					Step 1
+				</h2>
+				<p>
+					<img class="right" src="images/website building/Step 1.png">  <!-- The image has to be first or it won't float correctly. -->
+					The first thing you need to do is create a free account on <a href="https://github.com/">GitHub</a>. GitHub is a open-source code hosting platform with benefits far surpassing the ability to make a website. If you already have an account, just log in and skip step 2. If you already have a repository ready to be made into a website, you can skip to step 6 or step 9 depending on how ready you actually are.
+				</p>
+				<h2>
+					Step 2
+				</h2>
+				<p>
+					<img class="left" src="images/website building/Step 2.png">
+					When creating an account, you need to enter a username and password, and the email might also be necessary. (You'll see my username later as "CoolProgrammingUser".) Organizations are mentioned, but you don't really need to worry about those at this point. You'll also notice a terms and conditions section which you should read, but since you won't, I'll give you the summarized version: Don't be dumb (including putting private information on a open-source program). Also, anyone under the age of 13 is banned from having anything to do with this (which a pretty standard and depressing Internet rule). Since I didn't want to actually create a new account, I didn't proceed to the next steps of the registration process, but from memory (and Internet help), I can tell you that the second step is where you choose your plan: a free one that does basically everything you could ever want, or a paid one that allows you to also keep your code private if you want. The third step asks you a few questions about yourself and your purposes. Maybe someone creating an account in the future will provide me with screenshots I can put here to more adequately explain things.
+				</p>
+				<h2>
+					Step 3
+				</h2>
+				<p>
+					<img class="right" src="images/website building/Step 3.png">
+					Once you create or log on to your account, you'll find yourself on a page similar to the one on the right (although, if you just created an account, it'll be empty and likely have some things prompting you to get started with something). The next thing to do is click the green button saying "New repository". A repository in GitHub is basically a place to store all the code pertaining to a ceratin project, and you'll need one to create a website.
+				</p>
+				<h2>
+					Step 4
+				</h2>
+				<p>
+					Regardless of how you create your repository, you'll need to give it a unique name (unique among your repositories). The repository name for this tutorial is "testrepository". I recommend using a repository name without capital letters for reasons described later. From there you can change a few things if you'd like but the main thing to pay attention to is whether you want to initialize the repository with a README. A README is a file typically used to explain your repository, and the content is displayed on the main page of your repository. You'll see in the next step how that option can make a big difference.
+				</p>
+				<div class="column">
+					<h3>
+						Path 1
+					</h3>
+					<img src="images/website building/Step 4-1.png">
+				</div>
+				<div class="column">
+					<h3>
+						Path 2
+					</h3>
+					<img src="images/website building/Step 4-2.png">
+				</div>
+				<h2>
+					Step 5
+				</h2>
+				<p>
+					If you choose to opt out of creating a README, you'll get the scenario on the left: Depending on your purposes and whether you have a repository on your personal computer that you want to upload, this doesn't have to be too bad (although looking at all of that makes me sick), but regardless, you certainly can't create any files from scratch. This tutorial assumes that you're creating things from scratch, so I recommend initializing the repository with a README, so you'll arrive at the page on the right and you can easily click the button to "Create new file".
+				<div>
+					<div class="column left">
+						<h3>
+							Path 1 (continued)
+						</h3>
+						<img src="images/website building/Step 5-1.1.png">
+						<br>
+						<img src="images/website building/Step 5-1.2.png">
+					</div>
+					<div class="column right">
+						<h3>
+							Path 2 (continued)
+						</h3>
+						<img src="images/website building/Step 5-2.png">
+					</div>
+				</div>
+				<h2>
+					Step 6
+				</h2>
+				<p>
+					<img class="right" src="images/website building/Step 6.png">
+					Once on the page to create a new file, you need to name the file and add some content. If you want to create the home page of a website as is done here, the name of the file has to be "index.html". Also, now is the time if you'd like to change the indenting of your file. The default is 2 spaces for all new files; I prefer 4 spaces, but it doesn't really matter. Although it doesn't do it while you're creating the file, GitHub will provide helpful indenting and code highlighting for future edits.
+				</p>
+				<h2>
+					Step 7
+				</h2>
+				<p>
+					<img class="left" src="images/website building/Step 7.png">
+					This is a sample file filled using <a href="https://epicenterprograms.github.io/websitebuilder/">Epicenter's website builder</a>. The standards referenced are public domain and can be viewed <a href="https://github.com/EpicenterPrograms/standards/">here</a>, so you can feel free to use them however you like.
+				</p>
+				<h2>
+					Step 8
+				</h2>
+				<p>
+					When you're ready to save the file you have two choices: commiting directly to the branch or creating a new branch. Commiting directly to the branch changes the file itself whereas creating a new branch leaves the original file (and repository as a whole) unchnaged and creates a separate version containing the change. Branching is good for big projects with many contributors, but it's unnecessarily complicated for small personal projects. If you're considering branching just because you're scared of making a change that messes everything up, you can take comfort in knowing that all previous versions of your repository are accessible by clicking on the number of commits on its main page. If you decide to branch you'll have to name the branch, but this tutorial commits directly to the master branch.
+				</p>
+				<div class="column">
+					<h3>
+						Path 1
+					</h3>
+					<img src="images/website building/Step 8-1.png">
+				</div>
+				<div class="column">
+					<h3>
+						Path 2
+					</h3>
+					<img src="images/website building/Step 8-2.png">
+				</div>
+				<h2>
+					Step 9
+				</h2>
+				<p>
+					<img class="right" src="images/website building/Step 9.png">
+					Now that you have a basic webpage set up, it's time to tell GitHub to make a website from your repository. (Technically, you don't have to make any webpages first, but it's preferable.) Click on the settings tab to proceed to the next step.
+				</p>
+				<h2>
+					Step 10
+				</h2>
+				<p>
+					<img class="left" src="images/website building/Step 10.png">
+					From the settings tab, you need to scroll down until you come across a section called "GitHub Pages".
+				</p>
+				<h2>
+					Step 11
+				</h2>
+				<p>
+					<img class="right" src="images/website building/Step 11.png">
+					By default, GitHub pages is disabled. To change that you select a place you want to build the website in from the drop-down menu. (Don't bother with picking a theme: it could make things more confusing.)
+				</p>
+				<h2>
+					Step 12
+				</h2>
+				<p>
+					<img class="left" src="images/website building/Step 12.png">
+					For the purposes of this tutorial and moderately simple projects in general, the place to build your website is on the master branch (not in a docs folder). A common place to build a website from is a "gh-pages" branch, and GitHub will use that if availible, but there's not much point in creating a gh-pages branch if the whole purpose of your repository is to create a website.
+				</p>
+				<h2>
+					Step 13
+				</h2>
+				<p>
+					<img class="right" src="images/website building/Step 13.png">
+					Once you choose the source for your website, you'll be taken to the top of the page, and you'll see a notification that the GitHub pages source was saved.
+				</p>
+				<h2>
+					Step 14
+				</h2>
+				<p>
+					<img class="left" src="images/website building/Step 14.png">
+					If you scroll back down to the GitHub Pages section of the settings, you'll see a URL where your website is ready to be published. It should have the format https://[yourUsername].github.io/[yourRepository]/. If you named your repository with capitals, those capital letters will be in the URL; <strong>these capitals <em>cannot</em> be replaced with lowercase letters</strong>. This can create difficulties when trying to get people to visit your website. Within a few minutes, you should be able to access your website from that URL.
+				</p>
+				<h2>
+					Step 15
+				</h2>
+				<p>
+					<img class="right" src="images/website building/Step 15.png">
+					When GitHub tells you that your website has been published (you'll have to refresh the page), you can follow the link to see your creation. If you referenced the Epicenter standards in your website, you can get a cool-looking website like <a href="images/website building/Example 1.png">this</a>. If you didn't use those standards and didn't include extensive standards/formatting of your own, you would have a pretty lame-looking website, but that would serve as good inspiration to learn more HTML, CSS, and JavaScript.
+				</p>
+			</div>
+		</main>
+	</body>
 </html>
