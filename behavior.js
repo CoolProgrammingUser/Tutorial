@@ -1,49 +1,97 @@
 var Tutorial = {};
 
-Tutorial.makeFace = function (type, ID, extraClasses) {
+Tutorial.Character = function (source, options) {
 	/**
-	makes a face
+	makes a character
 	arguments:
-		type = optional; default = "happy-face"; the type of face (as assigned by class)
-		ID = optional; an ID for the face; using an empty string will allow skipping this argument
-		extraClasses = optional; an array or space-separated string of classes
+		source = optional; a URL, file location, or class to be used for the character's appearance
+			a class ending in "-face" will be optimized for creating a face
+			built-in faces are "happy-face", "sad-face", "angry-face", "alien-face", and "robot-face"
+		options = optional; an object ({}) with various optional parameters setting different aspects of the character
+			id: an ID for the character
+			classes: a list of classes for the character
+				can be an array or space-separated string of classes
+			movementUnit: the unit of movement for the character, e.g. "px", "em", "vw", ...
 	non-native functions: none
 	*/
-	if (type) {
-		if (typeof type != "string") {
-			throw "The type of face isn't a string.";
-		} else if (type.split("-")[type.split("-").length - 1] != "face") {
-			throw 'The class of the face doesn\'t end in "-face".';
+
+	var character = this;
+
+	if (source) {
+		if (typeof source != "string" && source.constructor.toString().search(/HTML.*Element/) == -1) {
+			throw "The type of character isn't a string or an HTML element.";
 		}
 	} else {
-		type = "happy-face";
+		source = "happy-face";
 	}
-	var face = document.createElement("div");
-	if (typeof ID == "string" && ID != "") {
-		face.id = ID;
+	options = options || {};
+	if (source.constructor.toString().search(/HTML.*Element/) > -1) {  // if it's an HTML element
+		this.HTMLElement = source;
+	} else if (source.includes(".")) {
+		this.HTMLElement = document.createElement("img");
+	} else {
+		if (source.split("-")[source.split("-").length - 1] == "face") {
+			this.HTMLElement = document.createElement("div");
+			this.HTMLElement.className = source;
+			let leftEye = document.createElement("div"),
+				rightEye = document.createElement("div"),
+				mouth = document.createElement("div");
+			leftEye.className = "face-left-eye";
+			rightEye.className = "face-right-eye";
+			mouth.className = "face-mouth";
+			this.HTMLElement.appendChild(leftEye);
+			this.HTMLElement.appendChild(rightEye);
+			this.HTMLElement.appendChild(mouth);
+		} else {
+			this.HTMLElement = document.createElement("div");
+		}
 	}
-	if (extraClasses) {
-		if (extraClasses instanceof Array || typeof extraClasses == "string") {
+	if (options.id) {
+		this.HTMLElement.id = options.id;
+	}
+	if (options.classes) {
+		if (options.classes instanceof Array || typeof options.classes == "string") {
+			let list;
 			if (extraClasses instanceof Array) {
-				var list = extraClasses.join(" ");
+				list = options.classes.join(" ");
 			} else {
-				var list = extraClasses;
+				list = options.classes;
 			}
-			face.className = type + " " + list;
+			this.HTMLElement.className = this.HTMLElement.className=="" ? list : this.HTMLElement.className + " " + list;
 		} else {
 			console.warn("The extra classes of the face maker are of an incorrect type.");
 		}
-	} else {
-		face.className = type;
 	}
-	var leftEye = document.createElement("div"),
-		rightEye = document.createElement("div"),
-		mouth = document.createElement("div");
-	leftEye.className = "face-left-eye";
-	rightEye.className = "face-right-eye";
-	mouth.className = "face-mouth";
-	face.appendChild(leftEye);
-	face.appendChild(rightEye);
-	face.appendChild(mouth);
-	return face;
+
+	this.xPosition = 0;
+	this.yPosition = 0;
+	this.movementUnit = options.movementUnit || "em";
+	this.moveLeft = function (distance) {
+		if (document.body.contains(character.HTMLElement)) {
+			distance = distance || 1;
+			character.xPosition -= distance;
+			character.HTMLElement.style.left = character.xPosition + character.movementUnit;
+		}
+	}
+	this.moveRight = function (distance) {
+		if (document.body.contains(character.HTMLElement)) {
+			distance = distance || 1;
+			character.xPosition += distance;
+			character.HTMLElement.style.left = character.xPosition + character.movementUnit;
+		}
+	}
+	this.moveUp = function (distance) {
+		if (document.body.contains(character.HTMLElement)) {
+			distance = distance || 1;
+			character.yPosition -= distance;
+			character.HTMLElement.style.top = character.yPosition + character.movementUnit;
+		}
+	}
+	this.moveDown = function (distance) {
+		if (document.body.contains(character.HTMLElement)) {
+			distance = distance || 1;
+			character.yPosition += distance;
+			character.HTMLElement.style.top = character.yPosition + character.movementUnit;
+		}
+	}
 };
