@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html class="html-class">
+<!doctype html>
+<html>
 	<head>
 		<base target="_parent">
+		<script src="https://epicenterprograms.github.io/standards/behavior/navigation.js"></script>
+		<script>
+			Standards.navigation.contents = [
+				[".", "Home"],
+				["websites", "Website building"]
+			];
+		</script>
+		<link rel="stylesheet" href="https://epicenterprograms.github.io/standards/formatting/foundation.css">
+		<link rel="stylesheet" href="../formatting.css">
 	</head>
-	<body class="navigation">
-		<h2 style="text-align:center">
+	<body class="navigation bigger">
+		<h2>
 			Contents
 		</h2>
 		<ul id="contentsList"></ul>
-		<script>
-			[  // [page URL, title]
-				["/tutorial/", "Home"],
-				["websites", "Website building"]
-			].forEach(function(pair) {
-				document.getElementById("contentsList").innerHTML += "<li><a href='" + pair[0] + "'>" + pair[1] + "</a></li>";
-			});
-		</script>
 	</body>
 </html>
